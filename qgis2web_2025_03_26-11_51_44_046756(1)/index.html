@@ -93,47 +93,6 @@
         var layer_19802020_1 = new L.imageOverlay(img_19802020_1,
                                               img_bounds_19802020_1,
                                               {pane: 'pane_19802020_1'});
-        bounds_group.addLayer(layer_19802020_1);
-        map.addLayer(layer_19802020_1);
-        map.createPane('pane_China_Hebei_2022_WGS_2');
-        map.getPane('pane_China_Hebei_2022_WGS_2').style.zIndex = 402;
-        var img_China_Hebei_2022_WGS_2 = 'data/China_Hebei_2022_WGS_2.png';
-        var img_bounds_China_Hebei_2022_WGS_2 = [[35.65939700665733,113.25678703529002],[42.91365225203611,120.34314715406686]];
-        var layer_China_Hebei_2022_WGS_2 = new L.imageOverlay(img_China_Hebei_2022_WGS_2,
-                                              img_bounds_China_Hebei_2022_WGS_2,
-                                              {pane: 'pane_China_Hebei_2022_WGS_2'});
-        bounds_group.addLayer(layer_China_Hebei_2022_WGS_2);
-        map.addLayer(layer_China_Hebei_2022_WGS_2);
-        map.createPane('pane_China_Henan_2022_WGS_3');
-        map.getPane('pane_China_Henan_2022_WGS_3').style.zIndex = 403;
-        var img_China_Henan_2022_WGS_3 = 'data/China_Henan_2022_WGS_3.png';
-        var img_bounds_China_Henan_2022_WGS_3 = [[31.29655882211255,110.17400031681413],[36.55817110425741,116.97819960484904]];
-        var layer_China_Henan_2022_WGS_3 = new L.imageOverlay(img_China_Henan_2022_WGS_3,
-                                              img_bounds_China_Henan_2022_WGS_3,
-                                              {pane: 'pane_China_Henan_2022_WGS_3'});
-        bounds_group.addLayer(layer_China_Henan_2022_WGS_3);
-        map.addLayer(layer_China_Henan_2022_WGS_3);
-        map.createPane('pane_China_Shandong_2022_WGS_4');
-        map.getPane('pane_China_Shandong_2022_WGS_4').style.zIndex = 404;
-        var img_China_Shandong_2022_WGS_4 = 'data/China_Shandong_2022_WGS_4.png';
-        var img_bounds_China_Shandong_2022_WGS_4 = [[33.858218719716604,114.75860107285924],[38.96271565866896,122.88413231230554]];
-        var layer_China_Shandong_2022_WGS_4 = new L.imageOverlay(img_China_Shandong_2022_WGS_4,
-                                              img_bounds_China_Shandong_2022_WGS_4,
-                                              {pane: 'pane_China_Shandong_2022_WGS_4'});
-        bounds_group.addLayer(layer_China_Shandong_2022_WGS_4);
-        map.addLayer(layer_China_Shandong_2022_WGS_4);
-        function pop_high_risk_area_5(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
 
         var pattern_high_risk_area_5_0 = new L.StripePattern({
             weight: 0.3,
